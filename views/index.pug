@@ -3,3 +3,28 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+   .container-fluid
+      .card-deck
+        .card
+          .card-body
+            h4.card-title Sample News 1
+            h6.card-subtitle.mb-2.text-muted News Meta details
+            p.card-text
+              | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dignissim felis sem, sollicitudin tristique sem sodales sit amet. Mauris luctus a tortor non molestie.
+            a.card-link(href='#!') Read More..
+          .card-footer Created by - Author Name            
+        .card
+          .card-body
+            h4.card-title Sample News 2
+            h6.card-subtitle.mb-2.text-muted News Meta details
+            p.card-text Donec vehicula commodo imperdiet. Vivamus at convallis ex, sed rutrum est. Proin interdum imperdiet metus eu dictum. Sed hendrerit commodo dictum. 
+            a.card-link(href='#!') Read More..
+          .card-footer Created by - Author Name
+        .card
+          .card-body
+            h4.card-title Sample News 3
+            h6.card-subtitle.mb-2.text-muted News Meta details
+            p.card-text
+              | Aliquam ut risus et ex ornare egestas sit amet quis justo. In hac habitasse platea dictumst. Sed non enim ultrices, ullamcorper nisl non, molestie mauris. Sed bibendum dolor nec nunc mollis vehicula nec eget erat. 
+            a.card-link(href='#!') Read More..
+          .card-footer Created by - Author Name
