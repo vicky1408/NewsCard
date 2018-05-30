@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET News Detail. */
 router.get('/:newsId', function(req, res) {
-  res.render('newsDetail',{title: 'News Detail',newsIdValue: req.params.newsId});
+  res.render('newsDetail',{title: req.params.newsId});
 });
 
 
