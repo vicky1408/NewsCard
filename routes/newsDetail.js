@@ -1,9 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.render('newsDetail',{title: 'News Detail'});
+/* GET News Detail. */
+router.get('/:newsId', function(req, res) {
+  res.render('newsDetail',{title: 'News Detail',newsIdValue: req.params.newsId});
 });
 
 
