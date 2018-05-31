@@ -1,13 +1,14 @@
 extends layout
 
 block content
-    h1= title
-    .container-fluid
-        p
-            | #{title} - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dignissim felis sem, sollicitudin tristique sem sodales sit amet. Mauris luctus a tortor non molestie.
-        br
-        div
-            a(href="http://localhost:3000/") Go to Main page.
+    each val in newsDocument
+        h1= val.title
+        .container-fluid
+            p
+                | #{val.content}
+            br
+            div
+                a(href="http://localhost:3000/") Go to Main page.
 
 
     
