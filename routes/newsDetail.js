@@ -19,11 +19,11 @@ router.get('/:newsId', function(req, res) {
     }).toArray(function (err, result) {
       if (err) throw err
       newsCollectionResult = result;
+      console.log(newsCollectionResult)
+      res.render('newsDetail',{title: req.params.newsId, newsDocument: newsCollectionResult});
     })
   })
 
-  console.log(newsCollectionResult)
-  res.render('newsDetail',{title: req.params.newsId, newsDocument: newsCollectionResult});
 });
 
 module.exports = router;
