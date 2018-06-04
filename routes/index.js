@@ -13,7 +13,7 @@ MongoClient.connect('mongodb://localhost:27017/dbVpm', function (err, client) {
   db.collection('newsCollection').find().toArray(function (err, result) {
     if (err) throw err
     newsCollectionResult = result;
-    //console.log(newsCollectionResult)
+    //console.log(newsCollectionResult);
   })
 })
 

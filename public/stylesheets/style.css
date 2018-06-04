@@ -6,3 +6,20 @@ body {
 a {
   color: #00B7FF;
 }
+
+/* News Timeline Page Styling */
+ul li div.detail{
+ width:80%; 
+ display: block;
+}
+
+ul li a.period{
+  display: block;
+  text-align: center;
+  width: 20%;
+  height: 100%;
+}
+
+ul li a.period:hover{
+  text-decoration: none;
+}

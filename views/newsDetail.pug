@@ -7,6 +7,15 @@ block content
             p
                 | #{val.content}
             br
+            if newsTimelineDocument.length
+                ul.list-group
+                    each tlVal in newsTimelineDocument
+                        li.list-group-item 
+                            div.float-left.detail
+                                |   #{tlVal.desc}
+                            a(href="#").float-right.period
+                                | #{tlVal.year}-#{tlVal.month}-#{tlVal.date}
+                br
             div
                 a(href="http://localhost:3000/") Go to Main page.
 

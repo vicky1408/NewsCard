@@ -3,6 +3,7 @@ var router = express.Router();
 
 var MongoClient = require('mongodb').MongoClient
 var newsCollectionResult;
+var newsTimelineResult;
 
 /* GET News Detail. */
 router.get('/:newsId', function(req, res) {
@@ -19,8 +20,17 @@ router.get('/:newsId', function(req, res) {
     }).toArray(function (err, result) {
       if (err) throw err
       newsCollectionResult = result;
-      console.log(newsCollectionResult)
-      res.render('newsDetail',{title: req.params.newsId, newsDocument: newsCollectionResult});
+      //console.log(newsCollectionResult);
+
+      db.collection('newsTimeline').find({
+        $and:[{"postId":postId}]
+      }).toArray(function(tlErr, tlResult) {
+        newsTimelineResult = tlResult;
+        
+        res.render('newsDetail',{title: newsCollectionResult[0].title, newsDocument: newsCollectionResult, newsTimelineDocument: newsTimelineResult});
+      })
+
+
     })
   })
 
