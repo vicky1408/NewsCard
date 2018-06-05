@@ -19,7 +19,7 @@ MongoClient.connect('mongodb://localhost:27017/dbVpm', function (err, client) {
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'விழித்திருப்போம் / Vizhithirupom', newsCollectionList : newsCollectionResult });
+  res.render('index', { site: 'விழித்திருப்போம் / Vizhithirupom', title: 'விழித்திருப்போம் / Vizhithirupom', newsCollectionList : newsCollectionResult });
 });
 
 

@@ -27,7 +27,7 @@ router.get('/:newsId', function(req, res) {
       }).toArray(function(tlErr, tlResult) {
         newsTimelineResult = tlResult;
         
-        res.render('newsDetail',{title: newsCollectionResult[0].title, newsDocument: newsCollectionResult, newsTimelineDocument: newsTimelineResult});
+        res.render('newsDetail',{site: 'விழித்திருப்போம் / Vizhithirupom', title: newsCollectionResult[0].title, newsDocument: newsCollectionResult, newsTimelineDocument: newsTimelineResult});
       })
 
 

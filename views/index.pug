@@ -1,16 +1,14 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
-   .container-fluid
-      .card-deck
-        each val in newsCollectionList
-          .card
-            .card-body
-              h4.card-title #{val.title}
-              h6.card-subtitle.mb-2.text-muted News Meta details
-              p.card-text
-                | #{val.content}
-              a.card-link(href="http://localhost:3000/news/" + val.postId) Read More..
-            .card-footer Created by - #{val.by}
+  .container-fluid
+    .card-deck
+      each val in newsCollectionList
+        .card
+          .card-body
+            h4.card-title #{val.title}
+            h6.card-subtitle.mb-2.text-muted News Meta details
+            p.card-text
+              | #{val.content}
+            a.card-link(href="http://localhost:3000/news/" + val.postId) Read More..
+          .card-footer Created by - #{val.by}

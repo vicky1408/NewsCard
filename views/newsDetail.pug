@@ -2,7 +2,7 @@ extends layout
 
 block content
     each val in newsDocument
-        h1= val.title
+        h2= val.title
         .container-fluid
             p
                 | #{val.content}
