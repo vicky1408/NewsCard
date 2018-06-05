@@ -10,5 +10,9 @@ html
     script(type='text/javascript', src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js')
 
   body
-    h1= site
+    a.site(href="http://localhost:3000/")
+      h1.float-left= site
+    .float-right
+       a(href="http://localhost:3000/createNews") Create News
+    .clearfix
     block content

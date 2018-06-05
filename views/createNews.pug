@@ -1,0 +1,18 @@
+extends layout
+
+block content
+    h3= title
+    .container-fluid
+        form
+        .form-group.row
+            label.col-sm-2.col-form-label(for='inputNewsTitle') News Title
+            .col-sm-10
+            input#inputNewsTitle.form-control(type='text' placeholder='News Title')
+        .form-group.row
+            label.col-sm-2.col-form-label(for='inputNewsDesc') Description
+            .col-sm-10
+            textarea#inputNewsTitle.form-control(rows='4' cols='50' placeholder='Detailed description')
+        .form-group.row
+            .col-sm-10.offset-sm-2
+            button.btn.btn-primary(type='submit') Submit
+    

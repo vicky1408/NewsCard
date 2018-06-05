@@ -7,6 +7,17 @@ a {
   color: #00B7FF;
 }
 
+
+a.site{
+  text-decoration: none;
+  color: rgb(182, 97, 112);
+}
+
+a.site:hover {
+  text-decoration: none;
+  color: rgb(114, 133, 141);
+}
+
 /* News Timeline Page Styling */
 ul li div.detail{
  width:80%; 
